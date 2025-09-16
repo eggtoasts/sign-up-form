@@ -180,9 +180,11 @@ input {
 form {
   padding: 20px 0px;
   background-color: white;
-  border: 1.5px solid #cacbce;
+  /* border: 1.5px solid #cacbce; */
 
-  box-shadow: 2px 5px 5px #cacbce, 2px -5px 5px #cacbce;
+  border-top: 1.5px solid #f7f7f7;
+
+  box-shadow: 2px 5px 5px #cacbce;
 }
 
 form > div > label {
