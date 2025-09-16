@@ -30,6 +30,8 @@ body {
   width: 100%;
   max-width: 100%;
   min-width: 100%;
+
+  height: 51.5rem;
   z-index: 2;
 }
 
@@ -39,6 +41,8 @@ body {
   flex-direction: column;
 
   justify-content: center;
+
+  align-items: stretch;
 }
 
 form div,
@@ -53,17 +57,16 @@ h2,
   flex-direction: column;
 
   /* border: 2px solid red; */
-  height: 100%;
-  height: 100vh;
-  min-height: 100vh;
 
-  min-width: 400px;
+  min-height: 100%;
+
+  min-width: 660px;
 
   align-items: stretch;
 
   justify-content: center;
 
-  /* flex: 1; */
+  flex: 1;
 }
 .container > .opacity-box {
   background-color: rgba(0, 0, 0, 0.664);
@@ -81,13 +84,15 @@ h2,
   font-size: 60px;
 }
 
-.container > img {
-  min-height: 100%;
-  max-height: 100%;
-  height: 100%;
+.img-cont {
+  min-width: 0px;
+  max-width: 660px;
+  max-height: 660px;
+}
 
-  min-width: 1000px;
-  width: 1000px;
+.container > img {
+  min-width: 660px;
+  /* width: 1000px; */
 }
 
 .container-row {
@@ -104,7 +109,9 @@ label {
 .container-item h2 {
   /* border: 1px solid rgb(109, 179, 254); */
   max-width: 600px;
-  font-size: 24px;
+  font-size: max(20px, 1.7vw);
+  /* font-size: clamp(1.5rem, 5vw, 1.8rem); */
+  font-weight: 500;
 }
 
 .container-item {
@@ -129,6 +136,7 @@ input {
 
   border: 1.5px solid #cacbce;
   border-radius: 7px;
+  padding: 2px;
 }
 
 form {
@@ -151,12 +159,44 @@ form > div {
 }
 
 .buttons {
-  flex: 1;
   margin-bottom: auto;
   align-self: flex-start;
   justify-content: flex-start;
+  margin-bottom: 90px;
 }
 
 button {
   margin-top: 20px;
 }
+
+.login-text {
+  margin-top: 20px;
+}
+
+.color {
+  color: var(--green);
+}
+
+.login-text {
+  margin-top: 20px;
+}
+
+.color {
+  color: var(--green);
+}
+
+button {
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #4a5c3b;
+}
+
+[type]:invalid {
+  border-color: red;
+}
+/* 
+[type]:valid {
+  border-color: rgb(53, 181, 89);
+} */

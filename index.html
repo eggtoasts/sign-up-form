@@ -7,7 +7,7 @@
     <link href="./styles.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container">
+    <div class="container img-cont">
       <div class="opacity-box"><h3>ODIN</h3></div>
       <img src="./unsplash-by-halie.jpg" />
     </div>
@@ -16,11 +16,12 @@
       <div class="container-item quote">
         <h2>
           This is not a real online service! You know you need something like
-          this in your life to help you realize your deepest dreams. Sign up now
+          this in your life to help you realize your deepest dreams. Sign up
+          <i>now</i>
           to get started.
         </h2>
 
-        <h2>You know you want to.</h2>
+        <h2>You <i>know</i> you want to.</h2>
       </div>
 
       <form class="container-item">
@@ -42,20 +43,29 @@
             <input type="email" id="email" name="email" />
           </label>
 
-          <label for="first-name"
+          <label for="phone"
             >Phone Number
-            <input type="text" id="first-name" name="first-name" />
+            <input
+              type="text"
+              id="phone-number"
+              name="phone-number"
+              pattern="(\d{3}[\-]\d{3}[\-]\d{4})"
+            />
           </label>
         </div>
 
         <div class="container-row">
           <label for="first-name"
             >Password
-            <input type="text" id="first-name" name="first-name" />
+            <input type="password" id="password" name="password" />
           </label>
           <label for="first-name"
             >Confirm Password
-            <input type="text" id="first-name" name="first-name" />
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+            />
           </label>
         </div>
       </form>
@@ -63,7 +73,9 @@
       <div class="container-item buttons">
         <button>Create Account</button>
 
-        Already have an account? Login
+        <div class="login-text">
+          Already have an account? <span class="color">Login</span>
+        </div>
       </div>
     </div>
   </body>
