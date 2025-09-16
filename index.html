@@ -8,7 +8,24 @@
   </head>
   <body>
     <div class="container img-cont">
-      <div class="opacity-box"><h3>ODIN</h3></div>
+      <div class="opacity-box">
+        <img class="logo" src="odin-logo.png" />
+        <h3>ODIN</h3>
+      </div>
+      <div class="credit">
+        <h4>
+          Photo by
+          <a
+            href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Halie West</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Unsplash</a
+          >
+        </h4>
+      </div>
       <img src="./unsplash-by-halie.jpg" />
     </div>
 
@@ -24,54 +41,84 @@
         <h2>You <i>know</i> you want to.</h2>
       </div>
 
-      <form class="container-item">
+      <form class="container-item" id="form">
         <h2>Let's do this!</h2>
         <div class="container-row">
           <label for="first-name"
-            >First Name
-            <input type="text" id="first-name" name="first-name" />
+            >First Name*
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              placeholder="First Name"
+              required
+            />
           </label>
-          <label for="first-name"
-            >Last Name
-            <input type="text" id="first-name" name="first-name" />
+          <label for="last-name"
+            >Last Name*
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="Last Name"
+              required
+            />
           </label>
         </div>
 
         <div class="container-row">
           <label for="email"
-            >Email Name
-            <input type="email" id="email" name="email" />
+            >Email Address*
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+              required
+            />
           </label>
 
           <label for="phone"
-            >Phone Number
+            >Phone Number*
             <input
               type="text"
               id="phone-number"
               name="phone-number"
               pattern="(\d{3}[\-]\d{3}[\-]\d{4})"
+              placeholder="111-111-1111"
+              required
             />
           </label>
         </div>
 
         <div class="container-row">
           <label for="first-name"
-            >Password
-            <input type="password" id="password" name="password" />
+            >Password*
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Your Password"
+              minlength="8"
+              required
+            />
           </label>
           <label for="first-name"
-            >Confirm Password
+            >Confirm Password*
             <input
               type="password"
               id="confirm-password"
               name="confirm-password"
+              placeholder="Confirm Password"
+              minlength="8"
+              required
             />
           </label>
         </div>
       </form>
 
       <div class="container-item buttons">
-        <button>Create Account</button>
+        <button type="submit" form="form">Create Account</button>
 
         <div class="login-text">
           Already have an account? <span class="color">Login</span>
